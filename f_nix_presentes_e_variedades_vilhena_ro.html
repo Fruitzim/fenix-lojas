@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fênix Presentes e Variedades | Vilhena - RO</title>
+    <meta name="description" content="O presente perfeito e tudo o que você precisa em um só lugar em Vilhena! Visite a Fênix Presentes e Variedades na Av. Paraná, 1761 - Alto Alegre.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        phoenix: {
+                            50: '#FFF7ED',
+                            100: '#FFEDD5',
+                            200: '#FED7AA',
+                            500: '#F97316',
+                            600: '#EA580C',
+                            700: '#C2410C',
+                            amber: '#D97706',
+                            gold: '#F59E0B',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAFAF9;
+            color: #1C1917;
+            overflow-x: hidden;
+        }
+        
+        /* Animações personalizadas */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            70% { transform: scale(1.25); opacity: 0; }
+            100% { transform: scale(1.25); opacity: 0; }
+        }
+        .whatsapp-pulse::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            background-color: #22C55E;
+            z-index: -1;
+            animation: pulse-ring 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+        }
+
+        /* Esconder scrollbar na barra de categorias mobile mantendo rolagem */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- 1. BARRA DE AVISO SUPERIOR (TOP BAR) -->
+    <div class="bg-stone-900 text-stone-100 text-xs sm:text-sm py-2 px-4 border-b border-stone-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-4">
+                <span class="inline-flex items-center gap-1.5 font-medium text-emerald-400">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Aberto agora • Fecha às 19:30
+                </span>
+                <span class="hidden md:inline-flex items-center gap-1.5 text-stone-300">
+                    <i class="fa-solid fa-location-dot text-orange-500"></i>
+                    Av. Paraná, 1761 - Alto Alegre, Vilhena - RO
+                </span>
+            </div>
+            <div class="flex items-center gap-3 ml-auto sm:ml-0">
+                <a href="#avaliacoes" class="inline-flex items-center gap-1 bg-amber-500/15 text-amber-300 border border-amber-500/30 px-2.5 py-0.5 rounded-full font-semibold hover:bg-amber-500/25 transition">
+                    <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+                    4.9 no Google
+                </a>
+                <a href="tel:+556933228711" class="hidden sm:inline-flex items-center gap-1.5 text-stone-300 hover:text-white transition">
+                    <i class="fa-solid fa-phone text-orange-500 text-xs"></i>
+                    (69) 3322-8711
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. CABEÇALHO FIXO (NAVBAR) -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-stone-200/80 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo Fênix -->
+                <a href="#inicio" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-orange-600 via-orange-500 to-amber-500 flex items-center justify-center text-white shadow-lg shadow-orange-500/25 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-fire-flame-curved text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-stone-900 block leading-none">
+                            Fênix
+                        </span>
+                        <span class="text-[11px] sm:text-xs font-medium text-orange-600 tracking-wide uppercase">
+                            Presentes e Variedades
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-stone-600">
+                    <a href="#inicio" class="hover:text-orange-600 transition">Início</a>
+                    <a href="#categorias" class="hover:text-orange-600 transition">Categorias</a>
+                    <a href="#vitrine" class="hover:text-orange-600 transition">Vitrine</a>
+                    <a href="#avaliacoes" class="hover:text-orange-600 transition">Avaliações</a>
+                    <a href="#localizacao" class="hover:text-orange-600 transition">Localização</a>
+                </nav>
+
+                <!-- Ações Direita -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <!-- Botão Lista de Interesse -->
+                    <button onclick="toggleWishlistModal()" class="relative p-2.5 sm:px-3.5 sm:py-2.5 rounded-xl bg-orange-50 text-orange-700 hover:bg-orange-100 transition flex items-center gap-2 font-semibold text-sm" aria-label="Lista de Interesse">
+                        <i class="fa-solid fa-heart text-orange-600"></i>
+                        <span class="hidden md:inline">Favoritos</span>
+                        <span id="wishlist-badge" class="w-5 h-5 rounded-full bg-orange-600 text-white text-xs flex items-center justify-center font-bold">0</span>
+                    </button>
+
+                    <!-- Botão WhatsApp Principal -->
+                    <a href="https://wa.me/556933228711?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20F%C3%AAnix%20Presentes%20e%20Variedades%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." 
+                       target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-4 py-2.5 rounded-xl shadow-md shadow-emerald-600/20 transition transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span class="hidden sm:inline">WhatsApp</span>
+                    </a>
+
+                    <!-- Botão Menu Mobile -->
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl text-stone-700 hover:bg-stone-100 transition" aria-label="Abrir menu">
+                        <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-stone-100 px-4 pt-2 pb-5 space-y-1 shadow-xl">
+            <a href="#inicio" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl font-semibold text-stone-700 hover:bg-orange-50 hover:text-orange-600">Início</a>
+            <a href="#categorias" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl font-semibold text-stone-700 hover:bg-orange-50 hover:text-orange-600">Categorias</a>
+            <a href="#vitrine" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl font-semibold text-stone-700 hover:bg-orange-50 hover:text-orange-600">Vitrine de Produtos</a>
+            <a href="#avaliacoes" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl font-semibold text-stone-700 hover:bg-orange-50 hover:text-orange-600">Avaliações (4.9 ⭐)</a>
+            <a href="#localizacao" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl font-semibold text-stone-700 hover:bg-orange-50 hover:text-orange-600">Endereço e Horários</a>
+        </div>
+    </header>
+
+    <!-- 3. BANNER PRINCIPAL (HERO SECTION) -->
+    <section id="inicio" class="relative overflow-hidden bg-gradient-to-b from-orange-50/90 via-amber-50/40 to-[#FAFAF9] pt-10 pb-16 sm:pt-16 sm:pb-24">
+        <!-- Elementos decorativos de fundo -->
+        <div class="absolute top-0 right-0 -translate-y-12 translate-x-1/4 w-96 h-96 bg-orange-400/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-96 h-96 bg-amber-400/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                <!-- Coluna de Texto -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <!-- Selo Google 4.9 -->
+                    <div class="inline-flex items-center gap-2 bg-white border border-amber-200 shadow-sm px-4 py-1.5 rounded-full mb-6">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-stone-800">
+                            4.9 estrelas nas Avaliações do Google
+                        </span>
+                    </div>
+
+                    <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[3.35rem] text-stone-900 leading-[1.15] tracking-tight mb-6">
+                        O presente perfeito e tudo o que você precisa em um só lugar em <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-500">Vilhena!</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+                        Na <strong>Fênix Presentes e Variedades</strong> você encontra presentes criativos, decoração, utilidades domésticas, papelaria e brinquedos com atendimento acolhedor e preços que cabem no seu bolso.
+                    </p>
+
+                    <!-- Botões CTA -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#vitrine" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-bold px-7 py-4 rounded-2xl shadow-lg shadow-orange-600/25 transition transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-gift"></i>
+                            Explorar Vitrine
+                        </a>
+                        <a href="https://wa.me/556933228711?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20F%C3%AAnix%20Presentes%20e%20Variedades." 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white hover:bg-emerald-50 text-stone-800 hover:text-emerald-700 border-2 border-stone-200 hover:border-emerald-500 font-bold px-7 py-4 rounded-2xl shadow-sm transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-600 text-xl"></i>
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Informações rápidas abaixo dos botões -->
+                    <div class="mt-8 pt-6 border-t border-stone-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-sm text-stone-600">
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-orange-600"></i>
+                            Av. Paraná, 1761 - Alto Alegre
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <i class="fa-regular fa-clock text-orange-600"></i>
+                            Aberto até às 19:30
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Coluna Visual / Card Destaque -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                            <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=900&q=80" 
+                                 onerror="this.src='https://placehold.co/800x650/EA580C/FFFFFF?text=Fenix+Presentes+e+Variedades'"
+                                 alt="Presentes e variedades na Fênix em Vilhena" 
+                                 class="w-full h-72 sm:h-96 object-cover">
+                        </div>
+
+                        <!-- Card Flutuante 1 -->
+                        <div class="animate-float absolute -bottom-5 -left-3 sm:-left-6 bg-white p-4 rounded-2xl shadow-xl border border-stone-100 flex items-center gap-3.5 max-w-[260px]">
+                            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center shrink-0 text-xl">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <p class="font-display font-bold text-stone-900 text-sm">Nota 4.9 em Vilhena</p>
+                                <p class="text-xs text-stone-500">Excelência em atendimento e variedade</p>
+                            </div>
+                        </div>
+
+                        <!-- Card Flutuante 2 -->
+                        <div class="hidden sm:flex absolute -top-4 -right-4 bg-stone-900 text-white px-4 py-3 rounded-2xl shadow-xl items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                            <span class="text-xs font-bold">Pronta entrega & Encomendas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SEÇÃO DE CATEGORIAS INTERATIVAS -->
+    <section id="categorias" class="py-14 sm:py-20 bg-white border-y border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+                <span class="text-orange-600 font-bold text-xs uppercase tracking-widest">O que você procura hoje?</span>
+                <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-stone-900 mt-2">
+                    Explore nossas categorias
+                </h2>
+                <p class="text-stone-600 text-sm sm:text-base mt-2">
+                    Clique em uma categoria abaixo para filtrar os destaques da nossa vitrine automaticamente.
+                </p>
+            </div>
+
+            <!-- Grid de 5 Categorias Principais (+ botão Todos) -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
+                <!-- Presentes Criativos -->
+                <button onclick="selectCategoryAndScroll('Presentes Criativos')" class="category-card group p-5 sm:p-6 rounded-3xl bg-stone-50 hover:bg-gradient-to-br hover:from-orange-600 hover:to-amber-500 border border-stone-200/80 hover:border-transparent text-center transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-orange-100 group-hover:bg-white/20 text-orange-600 group-hover:text-white flex items-center justify-center text-2xl mb-4 transition-colors">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-stone-900 group-hover:text-white text-sm sm:text-base transition-colors">
+                        Presentes Criativos
+                    </h3>
+                    <p class="text-xs text-stone-500 group-hover:text-orange-100 mt-1 transition-colors">
+                        Canecas, kits e mimos
+                    </p>
+                </button>
+
+                <!-- Decoração -->
+                <button onclick="selectCategoryAndScroll('Decoração')" class="category-card group p-5 sm:p-6 rounded-3xl bg-stone-50 hover:bg-gradient-to-br hover:from-orange-600 hover:to-amber-500 border border-stone-200/80 hover:border-transparent text-center transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-amber-100 group-hover:bg-white/20 text-amber-600 group-hover:text-white flex items-center justify-center text-2xl mb-4 transition-colors">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-stone-900 group-hover:text-white text-sm sm:text-base transition-colors">
+                        Decoração
+                    </h3>
+                    <p class="text-xs text-stone-500 group-hover:text-orange-100 mt-1 transition-colors">
+                        Luminárias, quadros e aromas
+                    </p>
+                </button>
+
+                <!-- Utilidades Domésticas -->
+                <button onclick="selectCategoryAndScroll('Utilidades Domésticas')" class="category-card group p-5 sm:p-6 rounded-3xl bg-stone-50 hover:bg-gradient-to-br hover:from-orange-600 hover:to-amber-500 border border-stone-200/80 hover:border-transparent text-center transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-orange-100 group-hover:bg-white/20 text-orange-600 group-hover:text-white flex items-center justify-center text-2xl mb-4 transition-colors">
+                        <i class="fa-solid fa-kitchen-set"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-stone-900 group-hover:text-white text-sm sm:text-base transition-colors">
+                        Utilidades Domésticas
+                    </h3>
+                    <p class="text-xs text-stone-500 group-hover:text-orange-100 mt-1 transition-colors">
+                        Potes, garrafas e cozinha
+                    </p>
+                </button>
+
+                <!-- Papelaria -->
+                <button onclick="selectCategoryAndScroll('Papelaria')" class="category-card group p-5 sm:p-6 rounded-3xl bg-stone-50 hover:bg-gradient-to-br hover:from-orange-600 hover:to-amber-500 border border-stone-200/80 hover:border-transparent text-center transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-amber-100 group-hover:bg-white/20 text-amber-600 group-hover:text-white flex items-center justify-center text-2xl mb-4 transition-colors">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-stone-900 group-hover:text-white text-sm sm:text-base transition-colors">
+                        Papelaria
+                    </h3>
+                    <p class="text-xs text-stone-500 group-hover:text-orange-100 mt-1 transition-colors">
+                        Escolar, escritório e fofuras
+                    </p>
+                </button>
+
+                <!-- Brinquedos -->
+                <button onclick="selectCategoryAndScroll('Brinquedos')" class="col-span-2 sm:col-span-1 category-card group p-5 sm:p-6 rounded-3xl bg-stone-50 hover:bg-gradient-to-br hover:from-orange-600 hover:to-amber-500 border border-stone-200/80 hover:border-transparent text-center transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-orange-100 group-hover:bg-white/20 text-orange-600 group-hover:text-white flex items-center justify-center text-2xl mb-4 transition-colors">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-stone-900 group-hover:text-white text-sm sm:text-base transition-colors">
+                        Brinquedos
+                    </h3>
+                    <p class="text-xs text-stone-500 group-hover:text-orange-100 mt-1 transition-colors">
+                        Jogos e diversão infantil
+                    </p>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. VITRINE DE PRODUTOS EM DESTAQUE (INTERATIVA) -->
+    <section id="vitrine" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Cabeçalho da Vitrine + Busca -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+                <div>
+                    <span class="text-orange-600 font-bold text-xs uppercase tracking-widest">Seleção Especial</span>
+                    <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-stone-900 mt-1">
+                        Vitrine em Destaque
+                    </h2>
+                    <p class="text-stone-600 text-sm sm:text-base mt-1">
+                        Gostou de algo? Consulte disponibilidade e reserve direto pelo nosso WhatsApp!
+                    </p>
+                </div>
+
+                <!-- Campo de Busca -->
+                <div class="relative w-full lg:w-80">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-stone-400"></i>
+                    <input type="text" 
+                           id="search-input" 
+                           oninput="filterProducts()" 
+                           placeholder="Buscar produto na vitrine..." 
+                           class="w-full pl-11 pr-4 py-3 rounded-2xl bg-white border border-stone-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none text-sm transition shadow-sm">
+                </div>
+            </div>
+
+            <!-- Barra de Filtros (Pills) -->
+            <div id="filter-pills" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-4 mb-6">
+                <button onclick="setCategory('Todos')" data-cat="Todos" class="filter-pill active shrink-0 px-4 py-2 rounded-xl text-sm font-semibold bg-orange-600 text-white shadow-sm transition">
+                    Todos os Produtos
+                </button>
+                <button onclick="setCategory('Presentes Criativos')" data-cat="Presentes Criativos" class="filter-pill shrink-0 px-4 py-2 rounded-xl text-sm font-semibold bg-white text-stone-600 border border-stone-200 hover:border-orange-400 transition">
+                    Presentes Criativos
+                </button>
+                <button onclick="setCategory('Decoração')" data-cat="Decoração" class="filter-pill shrink-0 px-4 py-2 rounded-xl text-sm font-semibold bg-white text-stone-600 border border-stone-200 hover:border-orange-400 transition">
+                    Decoração
+                </button>
+                <button onclick="setCategory('Utilidades Domésticas')" data-cat="Utilidades Domésticas" class="filter-pill shrink-0 px-4 py-2 rounded-xl text-sm font-semibold bg-white text-stone-600 border border-stone-200 hover:border-orange-400 transition">
+                    Utilidades Domésticas
+                </button>
+                <button onclick="setCategory('Papelaria')" data-cat="Papelaria" class="filter-pill shrink-0 px-4 py-2 rounded-xl text-sm font-semibold bg-white text-stone-600 border border-stone-200 hover:border-orange-400 transition">
+                    Papelaria
+                </button>
+                <button onclick="setCategory('Brinquedos')" data-cat="Brinquedos" class="filter-pill shrink-0 px-4 py-2 rounded-xl text-sm font-semibold bg-white text-stone-600 border border-stone-200 hover:border-orange-400 transition">
+                    Brinquedos
+                </button>
+            </div>
+
+            <!-- Grid de Produtos (Renderizado via JS) -->
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Cards inseridos dinamicamente -->
+            </div>
+
+            <!-- Mensagem caso nenhum produto seja encontrado -->
+            <div id="empty-state" class="hidden text-center py-16 bg-white rounded-3xl border border-stone-200/80">
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-orange-50 text-orange-500 flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+                <h3 class="font-display font-bold text-lg text-stone-900">Nenhum item encontrado com esse filtro</h3>
+                <p class="text-stone-500 text-sm mt-1 mb-5">Mas temos centenas de opções na loja física! Fale com nossa equipe no WhatsApp.</p>
+                <button onclick="resetFilters()" class="px-5 py-2.5 rounded-xl bg-orange-600 text-white font-semibold text-sm hover:bg-orange-700 transition">
+                    Mostrar Todos os Produtos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. BANNER 'POR QUE ESCOLHER A FÊNIX?' -->
+    <section class="py-16 bg-stone-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-orange-600/15 via-transparent to-amber-500/15 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Diferenciais da Loja</span>
+                <h2 class="font-display font-extrabold text-2xl sm:text-4xl mt-2">
+                    Por que Vilhena escolhe a Fênix?
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Pilar 1 -->
+                <div class="bg-stone-800/80 border border-stone-700/80 p-7 rounded-3xl">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-2">Variedade Completa em Vilhena</h3>
+                    <p class="text-stone-300 text-sm leading-relaxed">
+                        De uma lembrancinha de última hora a itens completos para casa, decoração e papelaria, você resolve tudo em uma única parada na Av. Paraná.
+                    </p>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="bg-stone-800/80 border border-stone-700/80 p-7 rounded-3xl">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-2">Atendimento Nota 4.9</h3>
+                    <p class="text-stone-300 text-sm leading-relaxed">
+                        Nossa equipe ajuda você a escolher o presente ideal com simpatia, agilidade e opções de embalagem que encantam quem recebe.
+                    </p>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="bg-stone-800/80 border border-stone-700/80 p-7 rounded-3xl">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-2">Praticidade pelo WhatsApp</h3>
+                    <p class="text-stone-300 text-sm leading-relaxed">
+                        Sem tempo para procurar? Mande uma mensagem no (69) 3322-8711, enviamos fotos das opções disponíveis e deixamos tudo separado para você.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PROVA SOCIAL (AVALIAÇÕES DO GOOGLE) -->
+    <section id="avaliacoes" class="py-16 sm:py-24 bg-white border-b border-stone-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header de Avaliações -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200/70 p-6 sm:p-8 rounded-3xl mb-12">
+                <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-5">
+                    <div class="w-16 h-16 rounded-2xl bg-white shadow-md flex items-center justify-center text-3xl font-display font-extrabold text-stone-900 border border-amber-200">
+                        4.9
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-center sm:justify-start gap-1 text-amber-400 text-lg mb-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h2 class="font-display font-extrabold text-xl sm:text-2xl text-stone-900">
+                            Excelência comprovada pelos clientes de Vilhena
+                        </h2>
+                        <p class="text-stone-600 text-sm mt-0.5">
+                            Avaliação média de <strong>4.9 de 5.0 estrelas</strong> no Perfil da Empresa no Google.
+                        </p>
+                    </div>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Fenix+Presentes+e+Variedades+Vilhena+RO" 
+                   target="_blank" rel="noopener noreferrer"
+                   class="shrink-0 inline-flex items-center gap-2 bg-white hover:bg-stone-50 text-stone-800 border border-stone-300 font-semibold text-sm px-5 py-3 rounded-xl shadow-sm transition">
+                    <i class="fa-brands fa-google text-orange-600"></i>
+                    Ver no Google
+                </a>
+            </div>
+
+            <!-- 3 Depoimentos Autênticos -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Depoimento 1 -->
+                <div class="bg-[#FAFAF9] p-6 sm:p-7 rounded-3xl border border-stone-200/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-amber-400 text-sm gap-0.5">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-xs text-stone-400 font-medium">Cliente Local • Vilhena</span>
+                        </div>
+                        <p class="text-stone-700 text-sm leading-relaxed italic">
+                            "Loja maravilhosa na Av. Paraná! Sempre que preciso de um presente criativo ou algo para casa vou direto na Fênix. Atendimento nota 10 e preços super justos."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-stone-200/70">
+                        <div class="w-10 h-10 rounded-full bg-orange-600 text-white font-bold flex items-center justify-center text-sm">
+                            MC
+                        </div>
+                        <div>
+                            <p class="font-bold text-stone-900 text-sm">Mariana Costa</p>
+                            <p class="text-xs text-stone-500">Avaliação verificada</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="bg-[#FAFAF9] p-6 sm:p-7 rounded-3xl border border-stone-200/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-amber-400 text-sm gap-0.5">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-xs text-stone-400 font-medium">Cliente Local • Vilhena</span>
+                        </div>
+                        <p class="text-stone-700 text-sm leading-relaxed italic">
+                            "Muita variedade de verdade! Encontrei material de papelaria para os meus filhos e ainda saí com itens de decoração lindos. Organização impecável."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-stone-200/70">
+                        <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm">
+                            RS
+                        </div>
+                        <div>
+                            <p class="font-bold text-stone-900 text-sm">Rafael Souza</p>
+                            <p class="text-xs text-stone-500">Avaliação verificada</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="bg-[#FAFAF9] p-6 sm:p-7 rounded-3xl border border-stone-200/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-amber-400 text-sm gap-0.5">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-xs text-stone-400 font-medium">Cliente Local • Vilhena</span>
+                        </div>
+                        <p class="text-stone-700 text-sm leading-relaxed italic">
+                            "O horário estendido até às 19h30 salva demais para quem sai do trabalho tarde! Mandei mensagem no WhatsApp, já deixaram meu presente embrulhado."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-stone-200/70">
+                        <div class="w-10 h-10 rounded-full bg-stone-800 text-white font-bold flex items-center justify-center text-sm">
+                            FA
+                        </div>
+                        <div>
+                            <p class="font-bold text-stone-900 text-sm">Fernanda Almeida</p>
+                            <p class="text-xs text-stone-500">Avaliação verificada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. LOCALIZAÇÃO, HORÁRIOS E CONTATO -->
+    <section id="localizacao" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-orange-600 font-bold text-xs uppercase tracking-widest">Venha nos visitar</span>
+                <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-stone-900 mt-2">
+                    Onde estamos em Vilhena
+                </h2>
+                <p class="text-stone-600 text-sm sm:text-base mt-2">
+                    Fácil acesso no bairro Alto Alegre, na Avenida Paraná. Esperamos por você!
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Card de Informações Oficiais -->
+                <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/90 shadow-lg flex flex-col justify-between space-y-6">
+                    <div class="space-y-6">
+                        <!-- Endereço -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-stone-900 text-base">Endereço Completo</h3>
+                                <p id="store-address" class="text-stone-600 text-sm mt-1 leading-relaxed">
+                                    Av. Paraná, 1761 - Alto Alegre<br>
+                                    Vilhena - RO, CEP 76985-295
+                                </p>
+                                <button onclick="copyAddress()" id="copy-btn" class="mt-2.5 inline-flex items-center gap-1.5 text-xs font-bold text-orange-600 hover:text-orange-700 bg-orange-50 hover:bg-orange-100 px-3 py-1.5 rounded-lg transition">
+                                    <i class="fa-regular fa-copy"></i>
+                                    <span id="copy-text">Copiar Endereço</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Horário -->
+                        <div class="flex items-start gap-4 pt-4 border-t border-stone-100">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-stone-900 text-base">Horário de Funcionamento</h3>
+                                <p class="text-emerald-600 font-semibold text-sm mt-1 flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                    Aberto hoje • Fecha às 19:30
+                                </p>
+                                <p class="text-stone-500 text-xs mt-0.5">
+                                    Segunda a Sábado: 08:30 às 19:30
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Telefone / WhatsApp -->
+                        <div class="flex items-start gap-4 pt-4 border-t border-stone-100">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-stone-900 text-base">Telefone e WhatsApp</h3>
+                                <p class="text-stone-700 font-semibold text-base mt-1">
+                                    (69) 3322-8711
+                                </p>
+                                <a href="https://wa.me/556933228711?text=Ol%C3%A1!%20Vi%20o%20site%20da%20F%C3%AAnix%20Presentes%20e%20Variedades." 
+                                   target="_blank" rel="noopener noreferrer"
+                                   class="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 hover:underline mt-1">
+                                    Iniciar conversa agora <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botão Traçar Rota -->
+                    <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Parana+1761+Alto+Alegre+Vilhena+RO" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="w-full inline-flex items-center justify-center gap-2.5 bg-stone-900 hover:bg-orange-600 text-white font-bold py-4 px-6 rounded-2xl shadow-md transition-colors">
+                        <i class="fa-solid fa-diamond-turn-right text-lg"></i>
+                        Traçar Rota no Google Maps
+                    </a>
+                </div>
+
+                <!-- Mapa Incorporado (Google Maps Embed) -->
+                <div class="lg:col-span-7 min-h-[340px] sm:min-h-[420px] rounded-3xl overflow-hidden border border-stone-200/90 shadow-lg bg-stone-100 relative">
+                    <iframe 
+                        title="Mapa da Fênix Presentes e Variedades em Vilhena RO"
+                        src="https://maps.google.com/maps?q=Avenida%20Parana,%201761,%20Alto%20Alegre,%20Vilhena%20-%20RO,%2076985-295&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        class="w-full h-full border-0 min-h-[340px] sm:min-h-[420px]"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. RODAPÉ COMPLETO -->
+    <footer class="bg-stone-950 text-stone-400 pt-14 pb-10 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-stone-800">
+                <!-- Coluna 1: Marca -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-600 to-amber-500 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-fire-flame-curved text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="font-display font-extrabold text-lg text-white block leading-none">Fênix</span>
+                            <span class="text-[11px] text-orange-400 uppercase tracking-wider font-semibold">Presentes e Variedades</span>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed text-stone-400">
+                        Sua loja de referência em Vilhena - RO para presentes criativos, decoração, utilidades domésticas, papelaria e brinquedos.
+                    </p>
+                    <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-amber-400 bg-amber-500/10 px-3 py-1.5 rounded-lg border border-amber-500/20">
+                        <i class="fa-solid fa-star"></i> 4.9 estrelas no Google
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Navegação Rápida -->
+                <div>
+                    <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-4">Navegação</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#inicio" class="hover:text-orange-400 transition">Início</a></li>
+                        <li><a href="#categorias" class="hover:text-orange-400 transition">Categorias</a></li>
+                        <li><a href="#vitrine" class="hover:text-orange-400 transition">Vitrine de Produtos</a></li>
+                        <li><a href="#avaliacoes" class="hover:text-orange-400 transition">Avaliações de Clientes</a></li>
+                        <li><a href="#localizacao" class="hover:text-orange-400 transition">Localização e Horários</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Contato Oficial -->
+                <div>
+                    <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-4">Atendimento</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-orange-500 mt-1"></i>
+                            <span>Av. Paraná, 1761 - Alto Alegre, Vilhena - RO, 76985-295</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-orange-500"></i>
+                            <span>(69) 3322-8711</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-regular fa-clock text-emerald-400"></i>
+                            <span>Aberto • Fecha às 19:30</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+                <p>&copy; <span id="current-year"></span> Fênix Presentes e Variedades — Vilhena, Rondônia. Todos os direitos reservados.</p>
+                <p>Preços e imagens da vitrine são ilustrativos. Consulte estoque via WhatsApp.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <div class="fixed bottom-5 right-5 z-50 group flex items-center gap-3">
+        <!-- Tooltip -->
+        <span class="hidden sm:inline-block bg-stone-900 text-white text-xs font-bold px-3.5 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            Fale com a Fênix!
+        </span>
+        <a href="https://wa.me/556933228711?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20F%C3%AAnix%20Presentes%20e%20Variedades." 
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Fale com a Fênix no WhatsApp"
+           class="relative whatsapp-pulse w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center text-3xl shadow-2xl transition-transform hover:scale-105">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- MODAL DA LISTA DE INTERESSE / FAVORITOS -->
+    <div id="wishlist-modal" class="hidden fixed inset-0 z-50 bg-stone-950/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-stone-200">
+            <div class="flex items-center justify-between pb-4 border-b border-stone-100">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-stone-900">Minha Lista de Interesse</h3>
+                </div>
+                <button onclick="toggleWishlistModal()" class="p-2 rounded-xl text-stone-400 hover:text-stone-700 hover:bg-stone-100 transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div id="wishlist-items" class="py-4 max-h-72 overflow-y-auto space-y-3">
+                <!-- Itens favoritados -->
+            </div>
+
+            <div class="pt-4 border-t border-stone-100 flex flex-col gap-2">
+                <a id="send-wishlist-wa" href="#" target="_blank" rel="noopener noreferrer"
+                   class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-5 rounded-2xl transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    Consultar Lista no WhatsApp
+                </a>
+                <button onclick="toggleWishlistModal()" class="w-full py-2.5 text-xs font-semibold text-stone-500 hover:text-stone-800">
+                    Continuar navegando
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT INTERATIVO -->
+    <script>
+        // Dados dos 8 produtos da vitrine
+        const products = [
+            {
+                id: 1,
+                name: "Kit Presente Caneca + Pelúcia",
+                category: "Presentes Criativos",
+                price: "R$ 69,90",
+                badge: "Mais Vendido",
+                image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80",
+                desc: "Conjunto especial pronto para presentear em aniversários e datas comemorativas."
+            },
+            {
+                id: 2,
+                name: "Luminária Lua Cheia 3D Touch",
+                category: "Decoração",
+                price: "R$ 89,90",
+                badge: "Destaque",
+                image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=600&q=80",
+                desc: "Iluminação aconchegante com base em madeira e troca de cores por toque."
+            },
+            {
+                id: 3,
+                name: "Jogo de Potes Herméticos 6 Peças",
+                category: "Utilidades Domésticas",
+                price: "R$ 79,90",
+                badge: "Praticidade",
+                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+                desc: "Vedação perfeita para manter alimentos frescos e sua cozinha super organizada."
+            },
+            {
+                id: 4,
+                name: "Kit Papelaria Fofa Tons Pastel",
+                category: "Papelaria",
+                price: "R$ 49,90",
+                badge: "Novidade",
+                image: "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=600&q=80",
+                desc: "Caderno espiral, marca-textos pastel, canetas em gel e bloquinho adesivo."
+            },
+            {
+                id: 5,
+                name: "Difusor de Aromas Luxo Varetas",
+                category: "Decoração",
+                price: "R$ 54,90",
+                badge: "Perfumaria",
+                image: "https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&w=600&q=80",
+                desc: "Fragrância suave e duradoura em frasco decorativo elegante para sala ou quarto."
+            },
+            {
+                id: 6,
+                name: "Quebra-Cabeça Educativo 500 Peças",
+                category: "Brinquedos",
+                price: "R$ 44,90",
+                badge: "Diversão",
+                image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=600&q=80",
+                desc: "Desafio criativo para reunir a família e estimular o raciocínio lógico."
+            },
+            {
+                id: 7,
+                name: "Garrafa Térmica Inox 1 Litro",
+                category: "Utilidades Domésticas",
+                price: "R$ 94,90",
+                badge: "Alta Durabilidade",
+                image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80",
+                desc: "Mantém bebidas geladas ou quentes por até 12 horas. Ideal para o dia a dia."
+            },
+            {
+                id: 8,
+                name: "Quadro Decorativo Minimalista",
+                category: "Decoração",
+                price: "R$ 59,90",
+                badge: "Estilo",
+                image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80",
+                desc: "Moldura moderna com acabamento fino para renovar qualquer ambiente."
+            }
+        ];
+
+        let currentCategory = 'Todos';
+        let wishlist = [];
+        const whatsappPhone = '556933228711';
+
+        // Renderiza os cards de produtos
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            const emptyState = document.getElementById('empty-state');
+            const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
+
+            const filtered = products.filter(item => {
+                const matchCat = currentCategory === 'Todos' || item.category === currentCategory;
+                const matchSearch = item.name.toLowerCase().includes(searchTerm) || 
+                                    item.desc.toLowerCase().includes(searchTerm) ||
+                                    item.category.toLowerCase().includes(searchTerm);
+                return matchCat && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            grid.innerHTML = filtered.map(product => {
+                const isFav = wishlist.includes(product.id);
+                const waText = encodeURIComponent(`Olá! Vi o item "${product.name}" (${product.price}) no site da Fênix Presentes e Variedades e gostaria de saber se tem disponível!`);
+                const waLink = `https://wa.me/${whatsappPhone}?text=${waText}`;
+
+                return `
+                    <article class="group bg-white rounded-3xl border border-stone-200/80 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <!-- Imagem do Produto -->
+                            <div class="relative h-52 overflow-hidden bg-stone-100">
+                                <img src="${product.image}" 
+                                     onerror="this.src='https://placehold.co/600x450/FFF7ED/EA580C?text=${encodeURIComponent(product.name)}'"
+                                     alt="${product.name}" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                
+                                <!-- Badge -->
+                                <span class="absolute top-3 left-3 bg-stone-900/85 backdrop-blur-sm text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                                    ${product.badge}
+                                </span>
+
+                                <!-- Botão Favoritar -->
+                                <button onclick="toggleFavorite(${product.id})" 
+                                        aria-label="Salvar nos favoritos"
+                                        class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 hover:bg-white shadow-md flex items-center justify-center transition ${isFav ? 'text-rose-500' : 'text-stone-400 hover:text-rose-500'}">
+                                    <i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Conteúdo -->
+                            <div class="p-5">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-orange-600">
+                                    ${product.category}
+                                </span>
+                                <h3 class="font-display font-bold text-stone-900 text-base mt-1 leading-snug">
+                                    ${product.name}
+                                </h3>
+                                <p class="text-xs text-stone-500 mt-1.5 line-clamp-2 leading-relaxed">
+                                    ${product.desc}
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Preço + Botão WhatsApp -->
+                        <div class="px-5 pb-5 pt-2">
+                            <div class="flex items-baseline justify-between mb-3">
+                                <div>
+                                    <span class="text-[10px] text-stone-400 block">Valor ilustrativo</span>
+                                    <span class="font-display font-extrabold text-xl text-stone-900">${product.price}</span>
+                                </div>
+                            </div>
+                            <a href="${waLink}" target="_blank" rel="noopener noreferrer"
+                               class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm py-3 px-4 rounded-xl shadow-sm transition">
+                                <i class="fa-brands fa-whatsapp text-base"></i>
+                                Consultar no WhatsApp
+                            </a>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        // Selecionar categoria nas pills
+        function setCategory(category) {
+            currentCategory = category;
+            
+            document.querySelectorAll('.filter-pill').forEach(btn => {
+                if (btn.dataset.cat === category) {
+                    btn.className = 'filter-pill active shrink-0 px-4 py-2 rounded-xl text-sm font-semibold bg-orange-600 text-white shadow-sm transition';
+                } else {
+                    btn.className = 'filter-pill shrink-0 px-4 py-2 rounded-xl text-sm font-semibold bg-white text-stone-600 border border-stone-200 hover:border-orange-400 transition';
+                }
+            });
+
+            renderProducts();
+        }
+
+        // Selecionar categoria pelos cards superiores e rolar até a vitrine
+        function selectCategoryAndScroll(category) {
+            setCategory(category);
+            document.getElementById('vitrine').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function filterProducts() {
+            renderProducts();
+        }
+
+        function resetFilters() {
+            document.getElementById('search-input').value = '';
+            setCategory('Todos');
+        }
+
+        // Gerenciar Lista de Favoritos
+        function toggleFavorite(id) {
+            if (wishlist.includes(id)) {
+                wishlist = wishlist.filter(item => item !== id);
+            } else {
+                wishlist.push(id);
+            }
+            updateWishlistUI();
+            renderProducts();
+        }
+
+        function updateWishlistUI() {
+            const badge = document.getElementById('wishlist-badge');
+            badge.textContent = wishlist.length;
+
+            const container = document.getElementById('wishlist-items');
+            const sendBtn = document.getElementById('send-wishlist-wa');
+
+            if (wishlist.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-8 text-stone-500 text-sm">
+                        <i class="fa-regular fa-heart text-2xl text-stone-300 mb-2 block"></i>
+                        Sua lista está vazia. Clique no coração dos produtos para salvar!
+                    </div>
+                `;
+                sendBtn.href = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent('Olá! Gostaria de falar com a Fênix Presentes e Variedades.')}`;
+                return;
+            }
+
+            const favProducts = products.filter(p => wishlist.includes(p.id));
+            container.innerHTML = favProducts.map(p => `
+                <div class="flex items-center justify-between gap-3 p-3 rounded-2xl bg-stone-50 border border-stone-200/70">
+                    <div class="flex items-center gap-3">
+                        <img src="${p.image}" alt="${p.name}" class="w-12 h-12 rounded-xl object-cover">
+                        <div>
+                            <p class="font-bold text-stone-900 text-xs">${p.name}</p>
+                            <p class="text-xs text-orange-600 font-semibold">${p.price}</p>
+                        </div>
+                    </div>
+                    <button onclick="toggleFavorite(${p.id})" class="text-stone-400 hover:text-rose-600 p-1.5" title="Remover">
+                        <i class="fa-solid fa-trash-can text-sm"></i>
+                    </button>
+                </div>
+            `).join('');
+
+            const namesList = favProducts.map(p => `• ${p.name} (${p.price})`).join('\n');
+            const message = `Olá! Vi estes itens no site da Fênix Presentes e Variedades e gostaria de consultar disponibilidade:\n\n${namesList}`;
+            sendBtn.href = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(message)}`;
+        }
+
+        function toggleWishlistModal() {
+            const modal = document.getElementById('wishlist-modal');
+            modal.classList.toggle('hidden');
+            updateWishlistUI();
+        }
+
+        // Copiar Endereço com fallback seguro
+        function copyAddress() {
+            const addressText = "Av. Paraná, 1761 - Alto Alegre, Vilhena - RO, CEP 76985-295";
+            const tempInput = document.createElement("textarea");
+            tempInput.value = addressText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            const copyTextEl = document.getElementById('copy-text');
+            const copyBtn = document.getElementById('copy-btn');
+            copyTextEl.textContent = "Endereço Copiado!";
+            copyBtn.classList.replace('text-orange-600', 'text-emerald-700');
+            copyBtn.classList.replace('bg-orange-50', 'bg-emerald-100');
+
+            setTimeout(() => {
+                copyTextEl.textContent = "Copiar Endereço";
+                copyBtn.classList.replace('text-emerald-700', 'text-orange-600');
+                copyBtn.classList.replace('bg-emerald-100', 'bg-orange-50');
+            }, 2500);
+        }
+
+        // Menu Mobile
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.replace('fa-xmark', 'fa-bars');
+            } else {
+                icon.classList.replace('fa-bars', 'fa-xmark');
+            }
+        }
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            renderProducts();
+            updateWishlistUI();
+        });
+    </script>
+</body>
+</html>
